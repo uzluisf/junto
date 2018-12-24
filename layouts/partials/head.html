@@ -1,0 +1,33 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+
+    <!-- Open Graph tags -->
+    {{ with .Site.Params.website }}<meta property="og:url" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.author }}<meta property="og:title" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.description }}<meta property="og:description" content="{{ . }}">{{ end }}
+    <meta property="og:type" content="website">
+
+    {{ .Hugo.Generator }}
+
+    <base href="{{ .Site.BaseURL }}">
+    {{ with .Site.Params.title }} <title>{{ . }}</title>{{ end }}
+
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
+    {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+    {{ end }}
+
+    <script src="{{ .Site.BaseURL }}js/code_default.js"></script>
+    {{ range .Site.Params.custom_js }}
+    <script src="{{ . | absURL }}"></script>
+    {{ end }}
+	
+    <link rel="icon" type="image/x-icon" href="{{ .Site.BaseURL }}images/favicon.ico">
+
+</head>

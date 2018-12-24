@@ -1,0 +1,15 @@
+<footer class="footer">
+  <section class="container">
+    {{ if not .Site.Params.hideCopyright }} 
+        © {{ dateFormat "2006" now }}
+    {{ end }}
+    {{ if not .Site.Params.hideCredits}} 
+    {{ if not .Site.Params.hideCopyright }} 
+        ·
+    {{ end }} 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & inspired by <a
+        href="https://v1.realworldocaml.org/">ROW</a>.
+    {{ end }}
+  </section>
+  {{ partial "mathjax.html" . }}
+</footer>

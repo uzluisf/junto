@@ -1,0 +1,14 @@
+<article class="page">
+    <header>
+      <h1 class="title">{{ .Title }}</h1>
+      {{ with .Site.Params.authorimage }} 
+      <div class="headshot">
+      <img src="/images/{{ . }}" alt="Author's image" class="img-circle">
+      </div>
+      {{ end }}
+    </header>
+
+    {{ .Content }}
+</article>
+
+<br/>

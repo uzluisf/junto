@@ -1,0 +1,61 @@
+# set base URL for site. It should end with a trailing slash.
+baseUrl = "/"
+
+theme = "junto"
+languageCode = "en"
+defaultContentLanguage = "en-us"
+
+# will appear below the footer links with a © sign and a year. 
+hideCredits = false  # hides "Powered by ..." if true
+hideCopyright = false  # hides "© 20xx" if true
+
+canonifyurls = true
+
+# configure pagination
+paginate = 10
+
+# format of metadata at the top of files. 
+metaDataFormat = "yaml"
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+
+[params]
+    title       = "Junto"
+    description = "Benjamin Franklin's personal blog"
+    author      = "Benjamin Franklin"
+    authorimage = "ben-franklin.jpg"
+    keywords    = ["personal", "blog"]
+   
+    # custom CSS
+    # custom_css = [ "css/main.css" ]
+
+    # custom JS
+    # custom_js = [ "js/code_default.js" ]
+
+    # mathjax
+    math = false
+
+[[params.social]]
+    name = "@ushistory.org"
+    weight = 1
+    url = "http://www.ushistory.org/franklin/"
+
+[[params.social]]
+    name = "@fi"
+    weight = 2
+
+[[menu.main]]
+    name = "Home"
+    weight = 1
+    url  = "/"
+
+[[menu.main]]
+    name = "Papers"
+    weight = 2
+    url  = "/posts/"
+
+[[menu.main]]
+    name = "About"
+    weight = 2
+    url = "/about/"

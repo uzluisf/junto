@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+{{ partial "head.html" . }}
+ 
+<body>
+
+	<div class="theme-choice">
+    	<ul>
+            <!--https://codepen.io/mallendeo/pen/eLIiG-->
+            <li class="tg-list-item">
+            <input class="tgl tgl-flip" id="cb5" type="checkbox"/>
+            <label class="night-mode-button tgl-btn" data-tg-off="Dark" data-tg-on="Light" for="cb5"></label>
+  	        </li>
+	    </ul>
+	</div>
+
+    <main class="wrapper">
+
+      <div class="mu">
+        {{ partial "header.html" . }}
+        {{ block "content" . }}{{ end }}
+      </div>
+
+      {{ partial "footer.html" . }}
+
+    </main>
+
+</body>
+
+</html>
