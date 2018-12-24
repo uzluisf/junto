@@ -3,6 +3,7 @@
 A (mostly) feature-less Hugo template focused on practicality.
 
 ![Content](/images/screenshot.png)
+![Dark](/images/tn.png)
 
 ## Table of Contents
 
